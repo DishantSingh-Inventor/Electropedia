@@ -1,0 +1,171 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microcontroller & SBCs Directory - Electropedia</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/components.css">
+  </head>>
+  <body>
+
+    <header class="site-header">
+      <div class="container">
+      <a href="index.html" class="brands">
+  <div class="brand-icon">HP</div>
+    <span>Electropedia</span>
+  </a>
+  <nav>
+  <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="boards.html" class="active">Boards</a></li>
+  <li><a href="sensors.html">Sensors</a></li>
+  <li><a href="protocols.html">Protocols</a></li>
+  <li><a href="pinouts.html">Pinouts</a></li>
+  <li><a href="compare.html">Compare</a></li>
+  <li><a href="tools.html">Tools</a></li>
+  <li><a href="quiz.html">Quiz</a></li>
+  </ul>
+  </nav>
+      
+  <div class="header-actions">
+  <button class="search-trigger-btn" type="button">
+  <span>Search hardware...</span>
+  <kbd>Ctrl K</kbd> 
+  </button>
+  <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+  </div>
+  </div>
+  </header>
+
+  <main class="main-content">
+  <div class="container"> </div>
+
+  <ul class="breadcrumb">
+  <li><a href="index.html">Home</a></li>
+  <li>Boards Directory</li>
+  </ul>
+
+  <div class="page-header">
+  <h1 class="page-title">Microcontrollers & Single Board Computers</h1>
+  <p class="page-description">
+    Browse technical specifications, pinouts counts, operating voltages, memory sizes, and architectures of popular microcontrollers and architectures for industry-standard embedded computing boards
+  </p>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-group" style="flex: 1; min-width: 220px;">
+    <label for="filter-search">Search :</label>
+      <input type="text" id="filter-search" class="form-input" placeholder="search by name, architecture, vendor..">
+    </div>
+
+  <div class="filter-group">
+    <label for="filter-category">Type:</label>
+    <select id="filter-category" class="form-select">
+      <option value="all">All categories</option>
+      <option value="microcontroller">Microcontrollers (MCU)</option>
+      <option value="sbc">Single Board computers (SBC)</option>
+  </select>
+  </div>
+
+  <div class="filter-group">
+    <label for="filter-vendor">Vendor:</label>
+    <select id="filter-vendor" class="form-select">
+      <option value="all">All Vendors</option>
+      <option value="Espressif">Espressif Systems</option>
+      <option value="Raspberry pi">Raspberry Pi Foundation</option>
+      <option value="Arduino">Arduino SA</option>
+      <option value="STMicroelectronics">STMicroelectronics / WeAct </option>
+      <option value="PJRC">PJRC (Teensy)</option>
+  </select>
+  </div>
+
+  <div class="filter-group">
+    <label for="filter-sort">Sort By:</label>
+      <select id="filter-sort" class="form-select">
+        <option value="name-asc">Name (A &rarr; Z)</option>
+        <option value="name-desc">Name (Z &rarr; A)</option>
+        <option value="clock-desc">Clock Speed (High &rarr; Low)</option>
+        <option value="gpio-desc">GPIO Pins (High &rarr; Low)</option>
+      </select>
+  </div>
+
+
+  </div>
+
+  <div class="grid-3" id="boards-grid">
+  </div>
+  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+    <div class="footer-grid">
+    <div class="footer-col">
+    <div class="brand" style="margin-bottom: 0.75rem;">
+    <div class="brand-icon">HP</div>
+    <span>Electropedia</span>
+    </div>
+    <p>
+      An open-source hardware documentation encyclopedia for microcontrollers, embedded boards, sensors, and electronic design.
+  </p>
+    </div>
+
+  <div class="footer-col">
+            <h4>Hardware</h4>
+            <ul>
+              <li><a href="boards.html">All Boards</a></li>
+              <li><a href="board-detail.html?id=esp32-wroom-32">ESP32-WROOM-32</a></li>
+              <li><a href="board-detail.html?id=raspberry-pi-pico-w">Raspberry Pi Pico W</a></li>
+              <li><a href="board-detail.html?id=raspberry-pi-5">Raspberry Pi 5</a></li>
+              <li><a href="board-detail.html?id=arduino-uno-r4-wifi">Arduino Uno R4</a></li>
+            </ul>
+          </div>
+
+  <div class="footer-col">
+            <h4>Reference</h4>
+            <ul>
+              <li><a href="sensors.html">Sensors & Modules</a></li>
+              <li><a href="protocols.html">Bus Protocols</a></li>
+              <li><a href="pinouts.html">Pinout Visualizer</a></li>
+              <li><a href="compare.html">Side-by-Side Compare</a></li>
+            </ul>
+          </div>
+
+        <div class="footer-col">
+            <h4>Utilities</h4>
+            <ul>
+              <li><a href="tools.html">LED Resistor Calculator</a></li>
+              <li><a href="tools.html">Voltage Divider Tool</a></li>
+              <li><a href="tools.html">Battery Life Estimator</a></li>
+              <li><a href="quiz.html">Hardware Quiz</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; Electropedia. Open Hardware Documentation.</div>
+          <div>Built with clean vanilla HTML, CSS & JavaScript.</div>
+        </div>
+      </div>
+    </footer>
+
+      <div class="search-modal" id="search-modal">
+      <div class="search-dialog">
+        <div class="search-header">
+          <input type="text" id="global-search-input" placeholder="Search boards, sensors, bus protocols..." autocomplete="off">
+          <kbd style="font-size: 0.75rem; color: var(--text-muted);">ESC to close</kbd>
+        </div>
+        <div class="search-results" id="search-results-list"></div>
+        <div class="search-footer">
+          <span>Press <kbd>Enter</kbd> to select</span>
+          <span>Navigation: <kbd>&uarr;</kbd> <kbd>&darr;</kbd></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/boards.js"></script>
+  </body>
+  </html> 
