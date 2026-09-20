@@ -213,5 +213,45 @@
 
 .pinout-board-wrapper {
     background-color: #0f172a;
+    border-radius: var(--radius-md);
+    padding: 2rem 1.5rem;
+    color: #fff;
+    border: 1px solid var(--border-color);
+}
+
+.pinout-header-info {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 1rem;
+}
+
+.pinout-diagram {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.pin-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+}
+
+.pin-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.4rem;
+    border-radius: var(--radius-sm);
+    background-color: #1e293b;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.15s;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.pin-row:hover, .pin-row.selected {
     
 }
